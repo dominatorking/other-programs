@@ -1,0 +1,64 @@
+
+
+
+
+//aim:program to which can tell us area of rectangle is greater than its perimeter or not
+
+#include<stdio.h>
+void main()
+{ double a,b,c,d,area,peri,length,width;
+int ctr=0;
+printf("Enter four sides of rectangle\n");
+scanf("%lf%lf%lf%lf",&a,&b,&c,&d);
+if(a==b)												//here in this program i take multiples if cases because	user can enter values in any order
+ctr++;
+if(a==c)
+ctr++;
+if(a==d)
+ctr++;
+if(b==c)
+ctr++;
+if(b==d)
+ctr++;
+if(c==d)
+ctr++;
+		if(ctr==2)
+	{
+		if(a!=b)
+		{length=a;
+		width=b;
+		}
+		if(a!=c)
+		{length=a;
+		width=c;
+		}
+		if(a!=d)
+		{length=a;
+		width=d;
+		}
+		if(b!=c)
+		{length=b;
+		width=c;
+		}
+		if(b!=d)
+		{length=b;
+		width=d;
+		}
+		if(c!=d)
+		{length=a;
+		width=b;
+		}
+		area=length*width;
+		peri=2*(length+width);
+		if(area>peri)
+		{ 	printf("%lf\n",area);
+			printf("%lf\n",peri);
+		printf("its area is greater than its perimeter");
+		}
+		else
+		{	printf("%lf\n",area);
+			printf("%lf\n",peri);
+		printf("its area is not greater than its perimeter");
+		}
+	}
+}
