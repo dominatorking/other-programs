@@ -1,0 +1,13 @@
+//AIM:how to convert string into integer
+//note: it only convert char digits to integer it can't convert alphabets
+#include<stdio.h>
+void main()
+{
+	char a[10];
+	int number;
+	printf("Enter a number\n ");
+	scanf("%s",&a);
+	number=atoi(a);
+	printf("its character form is %s\n ",a);
+	printf("its integer form is %d\n ",number);
+}
