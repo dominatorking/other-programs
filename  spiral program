@@ -1,0 +1,72 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+int main()
+{
+	int n, r;
+
+	printf("enter a digit\n");
+	scanf("%d", &n);
+	r = n + (n - 1);    //r is for rows
+	int k = n, z = n + (n - 1);  
+	for (int i = k; i >= 1; i--)
+	{
+		for (int j = 1; j <= r; j++)
+		{
+			if (j > z)
+			{
+				k++;
+			}
+			if (k == i)
+			{
+				printf("%d", k);
+			}
+			if (k > i)
+			{
+				printf("%d", k);
+				if (j <= z)
+				{
+					k--;
+				}
+			}
+
+
+		}
+		printf("\n");
+		z--;
+		k = n;
+
+	}
+
+	z = z + 2 ;
+	k = n;
+	for (int i = 2; i <= n; i++)
+	{
+		for (int j = 1; j <= r; j++)
+		{
+
+			if (j > z)
+			{
+				k++;
+			}
+			if (k == i)
+			{
+				printf("%d", k);
+			}
+			if (k > i)
+			{
+				printf("%d", k);
+				if (j <= z)
+				{
+					k--;
+				}
+			}
+		}
+		printf("\n");
+		k = n;
+		z++;
+
+	}
+
+}
